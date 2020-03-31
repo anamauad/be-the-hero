@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FiLogIn } from 'react-icons/fi';
 
 import './styles.css';
@@ -9,17 +10,17 @@ function Logon() {
   return (
     <div className="logon-container">
       <section className="form">
-        <img src={logoImg} alt="Be the hero " />
+        <img src={logoImg} alt="Be the hero" />
 
         <form>
           <h1>Log yourself in</h1>
 
-          <input placeholder="Your identification" />
-          <button type="submit">Sign in</button>
+          <input placeholder="NGO identification" />
+          <button className="button" type="submit">Sign in</button>
 
-          <a href="/register">
+          <Link to="/signup" className="nav-link">
             <FiLogIn size={16} color="#E02041" />
-            Sign up</a>
+            Sign up</Link>
         </form>
       </section>
 
