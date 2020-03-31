@@ -35,6 +35,11 @@ function Register() {
 
         </form>
 
+        <section className="last">
+          <Link to="/" className="nav-link">
+            <FiArrowLeft size={16} color="#E02041" />
+            Back to sign in page</Link>
+        </section>
       </div>
     </div>
   );

@@ -50,3 +50,21 @@
 .signup-container .content form .input-group input + input {
   margin-left: 8px;
 }
+
+.signup-container .content section.last {
+  display: none;
+}
+
+@media screen and (max-width: 1020px) {
+  .signup-container .content {
+    flex-direction: column;
+  }
+
+  .signup-container .content section:not(.last) .nav-link {
+    display: none;
+  }
+
+  .signup-container .content section.last {
+    display: block;
+  }
+}
