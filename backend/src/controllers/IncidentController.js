@@ -14,10 +14,10 @@ module.exports = {
     if (page < 1) {
       // min
       page = 1;
-    } else if (page * 5 > count) {
-      // max
-      const toAdd = 5 - (count % 5);
-      page = (count + toAdd) / 5;
+      // } else if (page * 5 > count) {
+      //   // max
+      //   const toAdd = 5 - (count % 5);
+      //   page = (count + toAdd) / 5;
     }
 
     const ngos = await connection('incident')
