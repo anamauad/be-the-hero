@@ -21,9 +21,12 @@ routes.post('/ngos', celebrate({
   [Segments.BODY]: Joi.object().keys({
     name: Joi.string().required(),
     email: Joi.string().required().email(),
-    whatsapp: Joi.number().min(10).max(11),
-    state: Joi.string().required(),
-    city: Joi.string().required().length(2),
+    phone: Joi.number(),
+    whatsapp: Joi.number(),
+    state: Joi.string().required().length(2),
+    city: Joi.string().required(),
+    website: Joi.string(),
+    zipcode: Joi.number(),
   })
 }), NgoController.create);
 
