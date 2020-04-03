@@ -6,7 +6,7 @@
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .logon-container section.form {
@@ -24,7 +24,10 @@
   margin-bottom: 32px;
 }
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1180px) {
+  .logon-container {
+    justify-content: center;
+  }
   .logon-container > img {
     display: none;
   }
