@@ -10,7 +10,8 @@ module.exports = {
       .first();
 
     if (!ngo) {
-      return response.status(400).json({ error: 'NGO not found' })
+      console.error(`NGO not found: ${id}`)
+      return response.status(400).json({ error: 'NGO not found', id })
     }
     return response.json(ngo);
   }

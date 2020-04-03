@@ -17,6 +17,7 @@ module.exports = {
       state,
       city
     });
+    console.log(`created NGOs with id ${id}`);
 
     return response.json({ id });
   },
@@ -26,6 +27,7 @@ module.exports = {
     // TODO use params as filter: by state, by city, by zipcode, by name
 
     const ngos = await connection('ngo').select('*');
+    console.log(`listing NGOs`);
     return response.json(ngos);
   }
 }

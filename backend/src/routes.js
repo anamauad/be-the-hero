@@ -20,32 +20,11 @@ routes.delete('/incidents/:id', IncidentController.delete);
 
 
 routes.get('/', (request, response) => {
-  //return response.send("Olá, dev!");
+  // return response.send("Olá, dev!");
   return response.json({
     texto: "Olá, dev!",
     evento: "Semana Omnistack 11.0",
     aluno: "Ana Paula Mauad"
-  });
-});
-
-routes.post('/users', (request, response) => {
-  return response.json({
-    msg: "TODO add user",
-    body: request.body
-  });
-});
-
-routes.get('/users', (request, response) => {
-  return response.json({
-    msg: "TODO List users",
-    params: request.query
-  });
-});
-
-routes.get('/users/:username', (request, response) => {
-  return response.json({
-    msg: "TODO User details",
-    username: request.params.username
   });
 });
 
