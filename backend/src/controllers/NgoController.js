@@ -1,5 +1,5 @@
 const connection = require('../database/connection');
-const crypto = require('crypto');
+const generateUniqueId = require('../utils/generateUniqueId');
 
 module.exports = {
   async create(request, response) {
@@ -7,7 +7,7 @@ module.exports = {
     const { name, email, whatsapp, state, city } = request.body;
 
     // geracao do id
-    const id = crypto.randomBytes(4).toString('HEX');
+    const id = generateUniqueId();
 
     await connection('ngo').insert({
       id,
